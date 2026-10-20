@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: rs-brute-jumanazar
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: TARGET_USERNAME
+        value: jumanazarmirzatillayev
+      - key: TARGET_FIRST
+        value: Jumanazar
+      - key: TARGET_LAST
+        value: Mirzatillayev
+      - key: PYTHON_VERSION
+        value: 3.11.9
